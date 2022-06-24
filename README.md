@@ -34,6 +34,15 @@
 
 4. 输入 `make -j6 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
 
+支持 iPv6：
+Extra packages ---> ipv6helper （选定这个后下面几项自动选择了）
+Network ---> odhcp6c
+Network ---> odhcpd-ipv6only
+LuCI ---> Protocols ---> luci-proto-ipv6
+LuCI ---> Protocols ---> luci-proto-ppp
+
+Utilities ---> open-vm-tools #打开适用于VMware的VM Tools
+
 本套代码保证肯定可以编译成功。里面包括了 R22 所有源代码，包括 IPK 的。
 
 你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
