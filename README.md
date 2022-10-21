@@ -22,7 +22,7 @@
    sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc-s1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
    ```
 
-2. 使用 ```git clone https://github.com/Boos4721/openwrt``` 命令下载好源代码，然后 `cd openwrt` 进入目录
+2. 使用 ```git clone https://github.com/xiaiohuan/openwrt``` 命令下载好源代码，然后 `cd openwrt` 进入目录
 
 3. ```bash
    ./scripts/feeds update -a
@@ -30,9 +30,9 @@
    make menuconfig
    ```
 
-3. `make -j8 download V=s` 下载dl库（国内请尽量全局科学上网）
+3. `make download -j8` 下载dl库（国内请尽量全局科学上网）
 
-4. 输入 `make -j6 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
+4. 输入 `make V=s -j6` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
 
 支持 iPv6：
 Extra packages ---> ipv6helper （选定这个后下面几项自动选择了）
